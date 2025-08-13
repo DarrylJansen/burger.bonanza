@@ -127,9 +127,13 @@ async function submit() {
         <input 
           type="file" 
           accept="image/*" 
+          capture="environment"
           @change="e => form.file = (e.target as HTMLInputElement).files?.[0] || null"
           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
         />
+        <div class="text-xs text-gray-500 mt-1">
+          📷 Tap to take a photo or choose from gallery
+        </div>
       </div>
     </div>
     
